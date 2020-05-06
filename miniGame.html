@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Project</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel='stylesheet' href='miniGame.css'>
+</head>
+<body>
+    <div id='finishMsg'></div>
+    <div id='playButtonWrap'></div>
+    <div id='grandWrapper'>
+      <div id='grandWrapperBlocker'></div>
+      <div id='playButton'>Play!</div>
+      <div id='howButton'>How to play?</div>
+      <div id='instruction'>
+          This is a clicker game!<br><br>
+        Click monster to inflict damage.<br><br>
+        Monster will also attack you.<br><br>
+        You have to kill the monster.<br><br>
+        <u>Skill 1</u>: Player recovers full HP.<br>
+        <u>Skill 2</u>: Player damage +10.<br>
+        <u>Skill 3</u>: Pause game.<br>
+      </div>
+      <div id='playerDMG'></div>
+      <div id='playerDMGcloneDiv'></div>
+      <div id='playerHPwrap'>
+          <div id='playerHP'>Player HP</div>
+      </div>
+      <div id='renderDMG'>Render damage</div>
+      <div id='clonedDMGdiv'></div>
+      <div id='monsterHPwrap'>
+          <div id='monsterHP'>Monster HP</div>
+      </div>
+      <div id='monster'><br><br>Monster</div>
+    
+      <div id='footer'>
+          <div id='skill1' class='skill'>Skill 1</div>
+          <div id='skill2' class='skill'>Skill 2</div>
+          <div id='skill3' class='skill'>Skill 3</div>
+      </div>
+    </div>
+    <audio id='bgm' controls loop preload='auto'>
+        <source src='gameBGM.mp3'>
+    </audio>
+    <audio id='enterSound' preload='auto'> 
+        <source src='enterSound.ogg'>
+    </audio>
+    <audio id='skillSound' preload='auto'>
+        <source src='useSkills.ogg'>
+    </audio>
+    <audio id='skillSound1' preload='auto'>
+        <source src='useSkills1.ogg'>
+    </audio>
+    <audio id='skillSound2' preload='auto'>
+        <source src='useSkills2.ogg'>
+    </audio>
+    <audio id='bubSound' preload='auto'>
+        <source src='bubblePop.ogg'>
+    </audio>
+<script src='miniGame.js'></script>
+<body>
+</html>

@@ -1,0 +1,220 @@
+body {
+    background-color: black;
+}
+
+#bgm {
+    position: absolute;
+    left: 630px;
+}
+
+#grandWrapper {
+	position: absolute;
+	border: 2px solid black;
+    width: 600px;
+    height: 500px;
+    background-color: lightgrey;
+}
+
+#grandWrapperBlocker {
+	position: absolute;
+    width: 600px;
+    height: 500px;
+    background-color: rgba(255, 0, 0, 0.2);
+    display: none;
+}
+
+#playButton {
+	position: absolute;
+	width: 100px;
+    height: 50px;
+    border: 3px solid black;
+    top: 20px;
+    left: 250px;
+    text-align: center;
+    z-index: 3;
+    border-radius: 10px;
+    background-color: skyblue;
+    font-size: 35px;
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: bold;
+}
+
+#playButton:hover {
+	cursor: pointer;
+    color: darkorange;
+    border-color: darkorange;
+    background-color: lightgreen;
+}
+
+#howButton {
+	position: absolute;
+	width: 80px;
+    height: 25px;
+    border: 3px solid black;
+    top: 80px;
+    left: 260px;
+    text-align: center;
+    z-index: 3;
+    border-radius: 10px;
+    background-color: skyblue;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Comic Sans MS", sans-serif;
+    padding-top: 2px;
+}
+
+#howButton:hover {
+	cursor: pointer;
+    color: darkorange;
+    border-color: darkorange;
+    background-color: lightgreen;
+}
+
+#footer {
+	position: relative;
+	border-top: 2px solid brown;
+    width: 100%;
+    height: 80px;
+    top: 420px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.skill {
+	border: 1px solid darkred;
+    text-align: center;
+    user-select: none;
+}
+
+.skill:hover {
+	cursor: pointer;
+}
+
+#skill1 {
+	background-color: lightblue;
+}
+
+#skill2 {
+	background-color: orange;
+}
+
+#skill3 {
+	background-color: lightgreen;
+}
+
+#monster {
+	border: 2px solid darkred;
+    background-color: darkred;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 1;
+    left: 250px;
+    top: 180px;
+    text-align: center;
+    user-select: none;
+    font-size: 18px;
+}
+
+#monster:hover {
+	cursor: pointer;
+}
+
+#playerHPwrap {
+	position: absolute;
+    top: 390px;
+    border: 2px solid rgb(48, 25, 52);
+    height: 30px;
+    width: 600px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/*Player HP = 596*/
+#playerHP {
+	position: absolute;
+    background-color: purple;
+    height: 30px;
+    width: 596px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 20px;
+}
+
+#monsterHPwrap {
+	position: absolute;
+    top: 160px;
+    width: 200px;
+    height: 12px;
+    border: 3px solid red;
+    left: 198px;
+    border-radius: 5px;
+}
+
+/*Monter HP = 200*/
+#monsterHP {
+    width: 200px; 
+    height: 12px;
+    left: 200px;
+    background-color: red;
+    text-align: center;
+    font-size: 12px;
+}
+
+#renderDMG {
+	position: absolute;
+    top: 120px;
+    left: 280px;
+}
+
+#playerDMG {
+	position: absolute;
+    top: 350px;
+    left: 300px;
+}
+
+#finishMsg {
+	position: absolute;
+	border: 2px solid black;
+    width: 602px;
+    height: 500px;
+    background-color: lightgreen;
+    z-index: 5;
+    font-size: 70px;
+    font-weight: bold;
+    font-family: "Comic Sans MS", sans-serif;
+    text-align: center;
+    color: darkorange;
+    display: none;
+}
+
+#playButtonWrap {
+	position: absolute;
+	border: 2px solid black;
+    width: 602px;
+    height: 500px;
+    background-color: black;
+    z-index: 2;
+    opacity: 0.4;
+    margin: auto;
+}
+
+#instruction {
+	position: absolute;
+    z-index: 2;
+	border: 2px blue solid;
+    width: 260px;
+    height: 280px;
+    top: 120px;
+    left: 170px;
+    border-radius: 20px;
+    background-color: lightblue;
+    text-align: center;
+    padding: 2px;
+    padding-top: 10px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 16px;
+    display: none;
+}

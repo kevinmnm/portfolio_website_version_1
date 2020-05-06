@@ -1,0 +1,386 @@
+.topBanner {
+    position: fixed;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 37px;
+    background-color: rgba(0,0,0,0.92);
+    font-size: 1em;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    text-align: center;
+    padding: 5px;
+    z-index: 100;
+}
+
+.topBannerDivs {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    font-size: 100%;
+    color: rgb(206, 205, 205);
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+.topBannerDivs:hover {
+    cursor: pointer;
+    color: white;
+}
+
+#homeImage {
+    display: inline-block;
+    position: relative;
+    height: 1.5em;
+
+}
+
+#homeImage:hover {
+    cursor: pointer;
+    color: white;
+}
+
+body {
+    background-color: #131212;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+#textWrapper {
+    position: relative;
+    top: 10%;
+    margin: 0;
+    margin-bottom: 5%;
+}
+
+#welcome {
+    margin-top: 50px;
+    text-align: center;
+    font-family: MontSerrat,Tahoma,Arial,sans-serif;
+    color: white;
+    font-weight: bold;
+    z-index: 1;
+}
+
+#welcome2 {
+    text-align: center;
+    font-family: MontSerrat,Tahoma,Arial,sans-serif;
+    color: white;
+    z-index: 1;
+}
+
+#intro {
+    color: #c5c5c5;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+
+#wingsImg {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    width: 80%;
+    z-index: -1;
+}
+
+#aboutMeImageDiv {
+    position: relative;
+    width: 100%;
+    margin-top: 0px;
+    border: 2px darkred solid;
+    margin-bottom: 5%;
+    border-radius: 15px;
+}
+
+#aboutMeImage {
+    width: 100%;
+    border-radius: 15px;
+}
+
+#playWrapper {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+    background-color: black;
+}
+
+#playButton {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.884);
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    border-radius: 15px;
+}
+
+#playButton:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    
+}
+
+#pauseButton {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.884);
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    border-radius: 15px;
+    display: none;
+}
+
+#pauseButton:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+#chooseVersionText {
+    text-align: center;
+    color: white;
+    margin-top: 8%;
+    margin-bottom: 0px;
+}
+
+#allButtonShowHide {
+    text-align: center;
+    margin-bottom: 2px;
+    background-color: rgb(58, 58, 58);
+    border: 1px grey solid;
+    color: white;
+    border-radius: 5px;
+    display: block;
+    width: 180px;
+}
+
+#allButtonShowHide:hover {
+    border-color: white;
+    background-image: none;
+}
+
+#weatherButtonShowHide {
+    text-align: center;
+    margin-bottom: 2px;
+    background-color: rgb(58, 58, 58);
+    border: 1px lightgreen solid;
+    color: lightgreen;
+    border-radius: 5px;
+    display: block;
+    width: 180px;
+}
+#weatherButtonShowHide:hover {
+    background-image: none;
+    border-color: white;
+    color: white;
+}
+
+#weatherApi {
+    color: white;
+    border: 1px darkred solid;
+    background: rgb(144,6,6);
+    background: linear-gradient(90deg, rgba(144,6,6,1) 0%, rgba(0,0,0,1) 50%);
+    margin-bottom: 5%;
+    width: 35%;
+    border-radius: 14px;
+    padding-bottom: 10px;
+}
+
+.location {
+    font-size: 20px;
+}
+
+#BTCButtonShowHide {
+    text-align: center;
+    margin-bottom: 2px;
+    background-color: rgb(58, 58, 58);
+    border: 1px lightblue solid;
+    color: lightblue;
+    border-radius: 5px;
+    display: block;
+    width: 180px;
+}
+
+#BTCButtonShowHide:hover {
+    cursor: pointer;
+    color: white;
+    border-color: white;
+}
+
+#btcContain {
+    height: 350px;
+    margin-bottom: 5%;
+    user-select: none;
+}
+
+.divReload {
+    background-color: black;
+    border: 1px white solid;
+    border-radius: 5px;
+    color: white;
+}
+
+.divReload:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 1px darkred solid;
+}
+
+#coolEyeDiv {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 5%;
+    width: 65%;
+}
+
+.coolEyeDiv {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 5%;
+    width: 65%;
+}
+
+#coolEyeId {
+    border: 2px black solid;
+    border-radius: 15%;
+    user-select: none;
+    -moz-user-select: none;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.coolEyeClass {
+    border: 2px black solid;
+    border-radius: 15px;
+    user-select: none;
+    -moz-user-select: none;
+    width: 100%;
+    margin-bottom: 5%;
+    border-radius: 15%;
+}
+
+#coolEyeId:hover {
+    cursor: crosshair;
+}
+
+.coolEyeClass:hover {
+    cursor: crosshair;
+}
+
+#coolEyeId:active {
+    cursor: crosshair;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+    border-color: darkred;
+}
+
+.coolEyeClass:active {
+    cursor: crosshair;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+    border-color: darkred;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+#effectButtonShowHide {
+    text-align: center;
+    margin-bottom: 2px;
+    background-color: rgb(58, 58, 58);
+    border: 1px red solid;
+    color: red;
+    border-radius: 5px;
+    display: block;
+    width: 180px;
+}
+
+#effectButtonShowHide:hover {
+    cursor: pointer;
+    color: white;
+    border-color: white;
+}
+
+#dmgText {
+    font-size: 100%;
+    font-weight: bold;
+    color: darkred;
+    z-index: 2;
+    position: absolute;
+    left: 39%;
+    top: 10%;
+    user-select: none;
+}
+
+#dmgText2 {
+    font-weight: bold;
+    color: darkred;
+    z-index: 2;
+    position: absolute;
+    left: 39%;
+    top: 10%;
+    user-select: none;
+}
+
+.coolEyeId2 {
+    user-select: none;
+    -moz-user-select: none;
+    width: 100%;
+    display: none;
+    font-size: 3em;
+    color: lightgreen;
+    font-weight: bold;
+    animation-name: cColor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    user-select: none;
+}
+
+#congratZ {
+    user-select: none;
+    -moz-user-select: none;
+    width: 100%;
+    display: none;
+    font-size: 3em;
+    color: lightgreen;
+    font-weight: bold;
+    animation-name: cColor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    user-select: none;
+    display: none;
+
+}
+
+@keyframes cColor {
+    0% {color: lightgreen;}
+    25% {color: yellow;}
+    50% {color: purple;}
+    75% {color: darkred;}
+    100% {color: lightgrey;}
+}
+
+.methods:hover {
+    cursor: pointer;
+}
+
+.methods {
+    color: grey;
+    border: 1px grey dotted;
+}

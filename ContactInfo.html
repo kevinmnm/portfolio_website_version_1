@@ -2,21 +2,130 @@
 <html>
 <head>
     <meta charset='utf-8'>
-    <title>Contact Info</title>
+    <title>My Portfolio Website</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel='stylesheet' href='css1.css'>
+    <link rel='stylesheet' href='External.css'>
+    <link rel='stylesheet' href='scss1.scss'>
 </head>
-<body>
+<body id='contactInfoBackground'>
 
 <div class='topBanner'>
     <div class='topBannerDivs'><img id='homeImage' src='Home Image.png' onclick="location.href='index.html'"></div>
     <div class='topBannerDivs' onclick="location.href='Portfolio.html'">Portfolio</div>
-    <div class='topBannerDivs'>Resume</div>
-    <div class='topBannerDivs'>Projects</div>
+    <div class='topBannerDivs' onclick="location.href='Resume.pdf'">Resume</div>
+    <div class='topBannerDivs' onclick="location.href='Projects.html'">Projects</div>
     <div class='topBannerDivs' onclick="locatin.href='ContactInfo.html'">Contact Info</div>
 </div>
+
+<center>
+
+<h3 id='chooseVersionText'><u>Choose Theme</u></h3>
+
+<div class="containerZ">
+    <div class="option">
+      <input type="radio" name="card" id="silver" value="silver">
+      <label for="silver" aria-label="Silver">
+        <span></span>
+        
+        Silver
+        
+        <div class="card card--white card--sm">
+          <div class="card__chip"></div>
+          <div class="card__content">
+            <div class="card__text">
+              <div class="text__row">
+                <div class="text__loader"></div>
+                <div class="text__loader"></div>
+              </div>
+              <div class="text__row">
+                <div class="text__loader"></div>
+                <div class="text__loader"></div>
+              </div>
+            </div>
+            <div class="card__symbol">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </label>
+    </div>
+    
+    <div class="option">
+      <input type="radio" name="card" id="royal" value="royal">
+      <label for="royal" aria-label="Royal blue">
+        <span></span>
+        
+        Royal blue
+        
+        <div class="card card--blue card--sm">
+          <div class="card__chip"></div>
+          <div class="card__content">
+            <div class="card__text">
+              <div class="text__row">
+                <div class="text__loader"></div>
+                <div class="text__loader"></div>
+              </div>
+              <div class="text__row">
+                <div class="text__loader"></div>
+                <div class="text__loader"></div>
+              </div>
+            </div>
+            <div class="card__symbol">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </label>
+    </div>
+    
+    <div class="option">
+      <input type="radio" name="card" id="dark" value="dark">
+      <label for="dark" aria-label="Dark grey">
+        <span></span>
+        
+        Dark grey
+        
+        <div class="card card--dark card--sm">
+          <div class="card__chip"></div>
+          <div class="card__content">
+            <div class="card__text">
+              <div class="text__row">
+                <div class="text__loader"></div>
+                <div class="text__loader"></div>
+              </div>
+              <div class="text__row">
+                <div class="text__loader"></div>
+                <div class="text__loader"></div>
+              </div>
+            </div>
+            <div class="card__symbol">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <div id='silverContact' class='contactCards'>
+  </div>
+
+  <div id='blueContact' class='contactCards'>
+  </div>
+
+  <div id='greyContact' class='contactCards'>
+  </div>
+
+</center>
 
 </body>
 </html>
