@@ -1,0 +1,939 @@
+<!DOCTYPE HTML>
+
+<HTML>
+
+<HEAD>
+   <meta name="viewport"
+   content="width=device-width, initial-scale=1">
+
+   <TITLE> Furnished BV Note Templates </TITLE>
+
+   <style type="text/css">
+
+   #df {
+ 	background-color: #d3d3d3;
+   }
+
+   #BV {
+   	font-family: 'Bebas Neue',sans-serif;
+	display: inline-block;
+   }
+   
+   #BV:hover {
+   	color: white;
+   	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+   	cursor: pointer;
+   }
+
+   #hrNew {
+	border: 1px solid black;
+   }
+
+   table {
+   	border-collapse: collapse;
+   }
+   
+   th, td {
+   	background-color: white;
+	border: solid black 1.5px;
+   }
+	
+   #redBox {
+   	width: 100px;
+   	height: 25px;
+   	margin: 1px;
+   	border: 1px solid;
+   	border-radius: 0.5em;
+   	background-color: #ffcccc;
+   	display: inline-block;
+   }
+
+   #greenBox {
+   	width: 100px;
+   	height: 25px;
+   	margin: 1px;
+   	border: 1px solid;
+   	border-radius: 0.5em;
+   	background-color: #ccffcc;
+   	display: inline-block;
+
+   }
+
+   #yellowBox {
+   	width: 100px;
+   	height: 25px;
+   	margin: 1px;
+   	border: 1px solid;
+   	border-radius: 0.5em;
+   	background-color: #ffffcc;
+   	display: inline-block;
+   }
+
+   #colorCode {
+   	text-align: left;
+   	font-family: "comic sans ms", sans-serif;
+   	font-weight: bold;
+   }
+
+   #cReject {
+   	background-color: #ffcccc;
+   }
+
+   #cPaid {
+   	background-color: #ccffcc;
+   }
+
+   #cOther {
+   	background-color: #ffffcc;
+   }
+
+   #cFirst {
+   	background-color: #ccffff;
+   }
+
+   td {
+   	text-align: center;
+   }
+
+   #PAb {
+   	float: right;
+   	padding:0.3em 1.2em;
+   	margin: 0 0.1em 0.1em 0;
+   	border: 0.16em solid purple;
+   	border-radius: 2em;
+   	box-sizing: border-box;
+   	font-family: 'Roboto',sans-serif;
+   	font-weight:300;
+ 	color: white;
+      	text-align: center;
+   	transition: all 0.2s;
+   	background-color: purple;
+   }
+
+   #PAb:hover {
+   	font-size: 15px;
+   	cursor: pointer;
+   }
+
+
+   #ETb {
+   	float: right;
+   	padding:0.3em 1.2em;
+   	margin: 0 0.1em 0.1em 0;
+   	border: 0.16em solid brown;
+   	border-radius: 2em;
+   	box-sizing: border-box;
+   	font-family: 'Roboto',sans-serif;
+   	font-weight:300;
+ 	color: white;
+      	text-align: center;
+   	transition: all 0.2s;
+   	background-color: brown;
+   }
+
+   #ETb:hover {
+   	font-size: 15px;
+   	cursor: pointer;
+   }
+
+   #TEb {
+   	float: right;
+   	padding:0.3em 1.2em;
+   	margin: 0 0.1em 0.1em 0;
+   	border: 0.16em solid blue;
+   	border-radius: 2em;
+   	box-sizing: border-box;
+   	font-family: 'Roboto',sans-serif;
+   	font-weight:300;
+ 	color: white;
+      	text-align: center;
+   	transition: all 0.2s;
+   	background-color: blue;
+   }
+
+   #TEb:hover {
+   	font-size: 15px;
+   	cursor: pointer;
+   }
+
+   #Notif {
+	width: 205px;
+   	border: 0.16em solid #ccffff;
+   	border-radius: 0.5em;
+   	box-sizing: border-box;
+   	font-family: "comic sans ms", sans-serif;
+   	font-weight: 100;
+ 	color: black;
+      	text-align: center;
+   	background-color: #ccffff;
+   	position: absolute;
+   	left: 1px;
+	top: 50px;
+   }
+
+   #Notif:after {
+   	content: '\21e9 \21e9';
+   }
+
+   #Notif:before {
+   	content: '\21e9 \21e9';
+   }
+
+   #Noti {
+	width: 205px;
+   	border: 0.16em solid #ccffff;
+   	border-radius: 0.5em;
+   	box-sizing: border-box;
+   	font-family: "comic sans ms", sans-serif;
+   	font-weight: 100;
+ 	color: black;
+      	text-align: center;
+   	background-color: #ccffff;
+   	position: absolute;
+	right: 1px;
+   	top: 50px;
+   }
+
+   #Noti:after {
+   	content: '\21e9 \21e9';
+   }
+
+   #Noti:before {
+   	content: '\21e9 \21e9';
+   }
+
+   #PAbText {
+   	border: solid 3px;
+   	border-color: purple;
+   	margin: 1px;   	
+   	display: none;
+	border-radius: 10px;
+	font-size: 15px;
+   	font-family: "comic sans ms", sans-serif;
+	font-weight: bold;
+	background-color: #ccffff;
+	padding: 0.7px;
+   }
+
+   #ETbText {
+   	border: solid 3px;
+   	border-color: brown;
+   	margin: 1px;  
+	display: none;
+	border-radius: 10px;
+	font-size: 15px;
+   	font-family: "comic sans ms", sans-serif; 
+	font-weight: bold;	
+	background-color: #ccffff;
+	padding: 0.7px;
+   }
+
+   #TEbText {
+   	border: solid 3px;
+   	border-color: blue;
+   	margin: 1px;
+	display: none;
+	border-radius: 10px;
+	font-size: 15px;
+	font-family: "comic sans ms", sans-serif;
+	font-weight: bold;
+	background-color: #ccffff;
+	padding: 0.7px;
+   }
+
+   #hrDisappear {
+   	display: none;
+   }
+
+   #closeePA {
+   	height: 15px;
+   	width: 15px;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 1px;
+	float: right;
+	background-color: #eb6069;
+	border-collapse: collapse;	
+   }
+
+   #closeePA:hover {
+   	cursor: pointer;
+   }
+
+   #closeeET {
+	height: 15px;
+   	width: 15px;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 1px;
+	float: right;
+	background-color: #eb6069;
+	border-collapse: collapse;
+   }
+
+   #closeeET:hover {
+   	cursor: pointer;
+   }
+
+   #closeeTE {
+	height: 15px;
+   	width: 15px;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 1px;
+	float: right;
+	background-color: #eb6069;
+	border-collapse: collapse;
+   }
+
+   #closeeTE:hover {
+   	cursor: pointer;
+   }
+
+   #exx {
+	position: relative;
+	bottom: 5px;
+   }
+
+   .switch {
+   	position: absolute;
+   	display: block;
+	width: 35px;
+	height: 20px;
+	right: 1px;
+	top: 1px;
+   }
+
+   .switch input {
+   	opacity: 0;
+	width: 0;
+	height: 0;
+   }
+
+   .slider {
+   	position: absolute;
+   	cursor: pointer;
+	top: 0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	background-color: grey;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+   }
+
+   input:checked + .slider {
+   	background-color: #2196F3;
+   }
+
+   input:focus + .slider {
+   	box-shadow: 0 0 1px #2196F3;
+   }
+
+   input:checked + .slider:before {
+	-webkit-transform: translateX(24px);
+	-ms-transform: translateX(24px);
+	transform: translateX(16px);
+   }
+
+   .slider:before {
+   	position: absolute;
+	content: "";
+	height: 17px;
+	width: 17px;
+	left: 1px;
+	bottom: 0px;
+	top: 2px;
+	right: 1px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+   }
+
+   .slider.round {
+	border-radius: 34px;
+   }
+
+   .slider.round:before {
+   	border-radius: 50%;
+   }
+
+   .drk {
+   	background-color: #212121;
+	color: white;
+   }
+
+   #drk:hover {
+   	color: yellow;
+   	text-shadow: 1px 1px 2px orange, 0 0 25px #eff556, 0 0 5px black;
+   	cursor: pointer;
+   }
+
+   #drk {
+   	background-color: #212121;
+	color: white;
+	display: inline-block;
+   }
+
+   #hrNewDark {
+	border: 1px solid white;
+   }
+
+   #moon {
+	float: right;
+	position: relative;
+	color: yellow;
+	font-size: 20px;
+	left: -26px;
+	top: -8px;
+	display: inline-block;
+   }
+
+   #sun {
+	float: right;
+	position: relative;
+	color: yellow;
+	font-size: 20px;
+	left: -30px;
+	top: -7px;
+	display: none;
+   }
+
+	
+
+/*--------------------------------For Dark mode!!!!-------------------------------------*/
+
+   #newDark {
+	border: 1px solid white;
+   }
+
+   #NotifDark {
+   	width: 205px;
+   	border: 0.16em solid #51756d;
+   	border-radius: 0.5em;
+   	box-sizing: border-box;
+   	font-family: "comic sans ms", sans-serif;
+   	font-weight: 100;
+ 	color: white;
+      	text-align: center;
+   	background-color: #51756d;
+   	position: absolute;
+   	left: 1px;
+	top: 50px;
+   }
+
+   #NotifDark:after {
+   	content: '\21e9 \21e9';
+	color: white;
+   }
+
+   #NotifDark:before {
+   	content: '\21e9 \21e9';
+	color: white;
+   }
+   	
+   #NotiDark {
+	width: 205px;
+   	border: 0.16em solid #51756d;
+   	border-radius: 0.5em;
+   	box-sizing: border-box;
+   	font-family: "comic sans ms", sans-serif;
+   	font-weight: 100;
+ 	color: white;
+      	text-align: center;
+   	background-color: #51756d;
+   	position: absolute;
+	right: 1px;
+   	top: 50px;
+   }
+
+
+   #NotiDark:after {
+   	content: '\21e9 \21e9';
+	color: white;
+   }
+
+   #NotiDark:before {
+   	content: '\21e9 \21e9';
+	color: white;
+   }
+
+   #cFirstDark {
+   	background-color: #51756d;
+	color: white;
+   }
+
+   #redBoxDark {
+   	width: 100px;
+   	height: 25px;
+   	margin: 1px;
+   	border: 1px solid;
+   	border-radius: 0.5em;
+   	background-color: #781425;
+	color: white;
+   	display: inline-block;
+   }
+
+   #greenBoxDark {
+   	width: 100px;
+   	height: 25px;
+   	margin: 1px;
+   	border: 1px solid;
+   	border-radius: 0.5em;
+   	background-color: #08570e;
+	color: white;
+   	display: inline-block;
+
+   }
+
+   #yellowBoxDark {
+   	width: 100px;
+   	height: 25px;
+   	margin: 1px;
+   	border: 1px solid;
+   	border-radius: 0.5em;
+   	background-color: #808c14;
+	color: white;
+   	display: inline-block;
+   }
+
+   #fSmallDark {
+	color: #c2c981;
+   }
+
+   #cPaidDark {
+   	background-color: #08570e;
+	color: white;
+   }
+
+   #cOtherDark {
+   	background-color: #808c14;
+	color: white;
+   }
+
+   #cRejectDark {
+   	background-color: #781425;
+	color: white;
+   }
+
+   #laborDark {
+	background-color: #4c4c4f;
+	color: white;
+   }
+
+   </style>
+
+</HEAD>
+
+<center><BODY id="df">
+   <div id = "moon">&#9790;</div>   
+   <div id = "sun">&#9788;</div>  
+   <label class="switch" title="Dark Mode">
+   	<input type="checkbox" id="cheecker" onchange="teaser(); modeIcon()"></input>
+   	<span class="slider round"></span>
+   </label>
+
+   <h1 id="BV" onclick="window.location.reload()">BV Note Templates Usage</h1>
+   
+   	<span id="Notif"> Color code info </span>
+   	<span id="Noti"> Click to learn more </span>
+   
+
+
+   <hr class="new" id="hrNew"> 
+
+   <div id="colorCode"><font size="1">
+   	<div id="redBox"><center>CLAIM REJECT</center></div>
+   	<div id="greenBox"><center>CLAIM PAID</center></div>
+ 	<div id="yellowBox"><center>OTHER</center></div></font>
+
+   	
+   	<button id="PAb" class="button" onclick="PAb(); oneAtATimePA()">PA template info</button>
+   	<button id="ETb" class="button" onclick="ETb(); oneAtATimeET()">External triage  
+info</button>
+   	<button id="TEb" class="button" onclick="TEb(); oneAtATimeTE()">More template  
+info</button>
+   	
+   </div>
+
+<!--------------------------New Span---------------------------->
+
+<div id="PAbText">
+<div id="closeePA" onclick="closerrPA()"><text id="exx">x</text></div> 
+Only do PA template when it's a Caremark Account and PA information is found. Caremark Account means that you can find it in PeopleSafe  
+<br/>
+PA information can be located in PeopleSafe or CAS.
+<br/><br/>
+Always check payor file to make sure the plan doesn't require special PA handling. 
+Some plans may only accepts PA initialization via phone call.
+<br/>
+Don't forget to register approved PA information in SPARCS!
+<br/><br/>
+When filing NON-SGM PA via CoverMyMeds, make sure to choose the correct PA form. You can search the PA form with BIN, PCN, and GROUP number instead of plan name. After completing the form, always send the form to prescriber by fax, not to the plan.
+<br/><br/>
+If patient wants to expedite the PA process, have patient call the insurance. Do not provide number in HBS SC screen, as that's pharmacy help desk number. Insurance phone number for patient to call is located on their insurance card.
+<br/><br/>
+File PA for rejections: NON-FORMULARY, NDC NOT COVERED, PA REQUIRED, and PLAN LIMITATION EXCEEDED.
+<br/><br/>
+<u>There are two types of PA and a medication can require more than one PA:</u><br/>
+1) PA for 'coverage' reason. (NON-FORMULARY, NDC NOT COLOVERD, PA REQUIRED)<br/>
+2) PA for 'Plan Limitation override' reason. (PLAN LIMITATION EXCEEDED)<br/>
+&#8650 &#8650 &#8650
+<br/>
+Example) A medication already has approved PA on file but claim rejects for PLAN LIMITATION EXCEEDED. So another PA has been filed and couple days later, PA is approved. - Now this drug has 2 approved PA on file.
+<br/><br/>
+You can also have doctor to send new prescription that falls under insurance limitation to circumvent PLAN LIMITATION EXCEEDED rejection. Make sure to call insurance to verify appropriate amount before calling the doctor's office.
+</div>
+
+<div id="ETbText">
+<div id="closeeET" onclick="closerrET()"><text id="exx">x</text></div> 
+Always call the insurance's pharmacy help desk (shown in SC screen in HBS) to verify  
+appropriate specialty pharmacy to triage to. 
+<br/>
+Never presume specialty pharmacy based on insurance as it can be different by the specific plan. (e.g. Many OPTUMRX plans' in-network specialty pharmacy is BRIOVARX. But you will still need to call and verify before triaging.)
+<br/><br/>
+External triage means "send prescription over to the in-network specialty pharmacy per patient's insurance". Plans can have several in-network specialty pharmacies.
+<br/>
+</div>
+
+<div id="TEbText">
+<div id="closeeTE" onclick="closerrTE()"><text id="exx">x</text></div> 
+Make sure you are filling out the templates completely with as much information as  
+you can.<br>
+If the person before you already did certain templates for the same prescription,  
+you don't have to do them unless the information changed.
+<br/>
+You can treat Silverlink call and inbound call from patient as a Welcome call. Again, it has to be the same drug that you are working on.
+<br/><br/>
+If you are cancelling as CANCEL ENROLLMENT-PT AND MD AWARE, call patient and doctor to let them know of current status. 
+</div>
+
+   <hr class="new" id="hrNew">
+
+   <table width="1400" cellpadding="5">
+	<tr>
+	   <th id="cFirst" width="500">Case</th>
+	   <th id="cFirst" width="300">Template</th>
+	   <th id="cFirst" width="300">Status in SPARCS</th>
+	   <th id="cFirst" width="300">Additional Instruction</th>
+	</tr>
+
+	<tr>
+	   <th id="cReject">CLAIM REJECT: PA req/non-formulary <u>initial  
+attempt</u></th>
+	   <th id="labor">
+	   	<ul>
+	   	   <li><b>Welcome call</b></li>
+	   	   <li><b>Prescription template</b></li>
+	   	</ul>
+	   <th id="labor"><b>SGM/NON-SGM PA PENDING</b></th>
+	   <td id="labor">Pend out 2 business days.</td>
+	</tr>
+   	
+	<tr>
+	   <th id="cReject">CLAIM REJECT: PA req/non-formulary <u>follow-up  
+#1</u></th>
+	   <th id="labor">Detailed free-hand note</th>
+	   <th id="labor">SGM/NON-SGM PA PENDING</th>
+	   <td id="labor">Pend out 2 business days.</td>
+	</tr>
+
+	<tr>
+	   <th id="cReject">CLAIM REJECT: PA req/non-formulary <u>follow-up #2</u>
+	   <br/>
+	   	(FOR NON-SGM PA ONLY)
+	   </th>
+	   <th id="labor">Detailed free-hand note</th>
+	   <th id="labor">CANCEL ENROLLMENT-PT AND MD AWARE
+	   <td id="labor">Choose: NO RESPONSE FROM MD.</td>
+	</tr>
+
+	<tr>
+	   <th id="cReject">CLAIM REJECT: PA req/non-formulary <u>follow-up #2</u>
+	   <br/>
+	   	(FOR SGM PA ONLY)
+	   <th id="labor">Detailed free-hand note</th>
+	   <th id="labor">PENDING SGM PA</th>
+	   <td id="labor">Keep on pending out for 2 business days until deicision is  
+made.</td>
+<br/>
+	   	
+	   </th>
+	</tr>
+   </table>
+
+<br/>
+
+   <table width="1400" cellpadding="5">
+	<tr>
+	   <th id="cPaid" width="500">CLAIM PAID: Copay is <u>$25 or less</u></th>
+	   <th id="labor" width="300">
+	   	<ul>
+	   	   <li>Welcome call</li>
+	   	   <li>Prescription template</li>
+	   	   <li>PA template</li>
+	   	   <li>Copay Quote template</li>
+	   	</ul>
+	   </th>
+	   <th id="labor" width="300">VERIFIER COMPLETE<br/><em>or</em><br/>PRIOR AUTH  
+COMPLETE</th>
+	   <td id="labor"width="300">Ship to arrive date: 5 business days out.</td>
+   	</tr>
+   	<tr>
+   	   <th id="cPaid">CLAIM PAID: CPA attempt #1</th>
+   	   <th id="labor">
+   	   	<ul>
+   	   	   <li>Welcome call</li>
+   	   	   <li>Prescription template</li>
+   	   	   <li>PA template</li>
+   	   	   <li>Detailed free-hand note</li>
+   	   	</ul>
+   	   </th>
+   	   <th id="labor">PENDING FINANCIAL ASSISTANCE</th>
+   	   <td id="labor">Make sure to pend out 1 business day only.</td>
+   	</tr>
+   	<tr>
+   	   <th id="cPaid">CLAIM PAID: CPA attempt #2</th>
+   	   <th id="labor">
+   	   	<ul>
+   	   	   <li>Welcome call</li>
+   	   	   <li>Prescription template</li>
+   	   	   <li>PA template</li>
+   	   	   <li>Copay Quote template</li>
+   	   	   <li>Copay Assistance template</li>
+   	   	   <li>Detailed free-hand note</li>
+   	   	</ul>
+   	   </th>
+   	   <th id="labor">VERIFIER COMPLETE
+<br/>
+   	   	<em>or</em>
+<br/>
+   	   PRIOR AUTH COMPLETE
+   	   </th>
+   	   <td id="labor">Ship to arrive date: 5 business days out.</td>
+   	<tr>
+   	   <th id="cPaid">CLAIM PAID: Patient denies CPA</th>
+   	   <th id="labor">
+   	   	<ul>
+   	   	   <li>Welcome call</li>
+   	   	   <li>Prescription template</li>
+   	   	   <li>PA template</li>
+   	   	   <li>Copay Quote template</li>
+   	   	   <li>Copay Assistance template</li>
+    	   	</ul>
+   	   </th>
+   	   <th id="labor">VERIFIER COMPLETE<br/><em>or</em><br/>PRIOR AUTH COMPLETE</th>
+   	   <td id="labor">Make sure that the patient understands about CPA.</td>
+   	</tr>
+   	</tr>
+   	   <th id="cPaid">CLAIM PAID: Medicare or Medicaid plan.</th>
+   	   <th id="labor">
+   	   	<ul>
+   	   	   <li>Welcome call</li>
+   	   	   <li>Prescription template</li>
+   	   	   <li>PA template</li>
+   	   	   <li>Copay Quote template</li>
+   	   	</ul>
+   	   </th>
+   	   <th id="labor">PENDING FINANCIAL ASSISTANCE</th>
+   	   <td id="labor">Must acquire authorization from patient first.<br/>Fill out RCC  
+Referral Form and email it to RCC.<br/>Pend out 2 business days.</td>
+   </table>
+
+<br/>
+
+   <table width="1400" cellpadding="5">
+   	<tr>
+   	   <th id="cOther" width="500">Internal triage</th>
+   	   <th id="labor" width="300">Triage template</th>
+   	   <th id="labor" width="300">VERIFIER PENDING/FOLLOW-UP</th>
+   	   <td id="labor" width="300">Refer to this TheSource document: <br/><em>TSRC-PROD- 
+018036</em>.<br/> Pend out 2 business days.</td>
+   	</tr>
+   	<tr>
+   	   <th id="cOther">CANCEL: PA Denial</th>
+   	   <th id="labor">Denial template</th>
+   	   <th id="labor">CANCEL ENROLLMENT-PT AND MD AWARE</th>
+   	   <td id="labor">Choose: INSURANCE DENIED.</td>
+   	</tr>
+   	<tr>
+   	   <th id="cOther">CANCEL: External triage</th>
+   	   <th id="labor">Detailed free-hand note</th>
+   	   <th id="labor">CANCEL ENROLLMENT-PT AND MD AWARE</th>
+   	   <td id="labor">Choose: TRIAGE-COMPETITOR.</td>
+   	</tr>
+   	<tr>
+   	   <th id="cOther">CANCEL: Any other reason</th>
+   	   <th id="labor">Detailed free-hand note</th>
+   	   <th id="labor">CANCEL ENROLLMENT-PT AND MD AWARE</th>
+   	   <td id="labor">Choose closest option at your own discretion.</td>
+   	</th>
+   </table>
+<br/>
+
+<!------------------JAVASCRIPT------------------->
+<!-------------- Major Adjustment! ------------------>
+
+<script>
+
+function closerrPA() {
+	PAbText.style.display = "none";
+}
+
+function closerrET() {
+	ETbText.style.display = "none";
+}
+
+function closerrTE() {
+	TEbText.style.display = "none";
+}
+
+function TEb() {
+   var x =
+   document.getElementById("TEbText");
+   	if (x.style.display === "block") {
+   	x.style.display = "none";
+   	} else {
+   	x.style.display = "block";
+   	}
+}
+
+function PAb() {
+   var x =
+   document.getElementById("PAbText");
+   	if (x.style.display === "inline") {
+   	x.style.display = "none";
+   	} else {
+   	x.style.display = "inline";
+   	}
+
+}
+
+function ETb() {
+   var x = 
+   document.getElementById("ETbText");
+   	if (x.style.display === "block") {
+   	x.style.display = "none";
+   	} else {
+   	x.style.display = "block";
+   	}
+
+}
+
+
+function LastUpdated() {
+   document.write(document.lastModified);
+}
+
+function oneAtATimePA() {
+   if (PAbText.style.display = "block") 
+   	{ETbText.style.display = "none";} {TEbText.style.display = "none";}
+}
+
+function oneAtATimeET() {
+   if (ETbText.style.display = "block") 
+   	{PAbText.style.display = "none";} {TEbText.style.display = "none";}
+}
+
+function oneAtATimeTE() {
+   if (TEbText.style.display = "block")
+   	{PAbText.style.display = "none";} {ETbText.style.display = "none";}
+}
+
+window.onload = function deFault() {
+   document.getElementById("cheecker").checked = false;
+}
+
+function modeIcon() {
+   if (document.getElementById("cheecker").checked == true) {
+	document.getElementById("moon").style.display = "none";
+	document.getElementById("sun").style.display = "block";
+   } else {
+   	document.getElementById("moon").style.display = "block";
+	document.getElementById("sun").style.display = "none";
+   }
+}
+ 
+function teaser() {
+   if (document.getElementById("cheecker").checked == true) {
+   	document.getElementById("BV").id = "drk";
+	document.getElementById("df").style.backgroundColor = "#212121";
+	document.getElementById("hrNew").id = "hrNewDark";
+	document.getElementById("hrNew").id = "hrNewDark";
+	document.getElementById("Notif").id = "NotifDark";
+	document.getElementById("Noti").id = "NotiDark";
+	document.getElementById("cFirst").id = "cFirstDark";
+	document.getElementById("cFirst").id = "cFirstDark";
+	document.getElementById("cFirst").id = "cFirstDark";
+	document.getElementById("cFirst").id = "cFirstDark";
+	document.getElementById("redBox").id = "redBoxDark";
+	document.getElementById("greenBox").id = "greenBoxDark";
+	document.getElementById("yellowBox").id = "yellowBoxDark";
+	document.getElementById("fSmall").id = "fSmallDark";
+	document.getElementById("fSmall").id = "fSmallDark";
+	document.getElementById("cReject").id = "cRejectDark";
+	document.getElementById("cReject").id = "cRejectDark";
+	document.getElementById("cReject").id = "cRejectDark";
+	document.getElementById("cReject").id = "cRejectDark";
+	document.getElementById("cPaid").id = "cPaidDark";
+	document.getElementById("cPaid").id = "cPaidDark";
+	document.getElementById("cPaid").id = "cPaidDark";
+	document.getElementById("cPaid").id = "cPaidDark";
+	document.getElementById("cPaid").id = "cPaidDark";
+	document.getElementById("cOther").id = "cOtherDark";
+	document.getElementById("cOther").id = "cOtherDark";
+	document.getElementById("cOther").id = "cOtherDark";
+	document.getElementById("cOther").id = "cOtherDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+	document.getElementById("labor").id = "laborDark";
+   } 
+   else {
+	window.location.reload();
+   }
+}
+
+</script>
+
+<code id="fSmall" width="1400" style="font-size:11px">Made by Kevin Song</code> <br/>
+<code id="fSmall" style="font-size:11px">Last updated: 3:46 PM 1/8/2020</code>
+
+</BODY></center>
+
+</HTML>

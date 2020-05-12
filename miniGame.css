@@ -218,3 +218,33 @@ body {
     font-size: 16px;
     display: none;
 }
+
+#bgm {
+    display: none;
+}
+
+#playAgain {
+    position: absolute;
+    z-index: 6;
+    width: 100px;
+    height: 30px;
+    border: 2px darkblue solid;
+    left: 260px;
+    top: 230px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    color: darkblue;
+    background-color: lightblue;
+    border-radius: 10px;
+    display: none;
+}
+
+#playAgain:hover {
+    color: lightblue;
+    border-color: lightblue;
+    background-color: darkblue;
+    cursor: pointer;
+}

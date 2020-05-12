@@ -17,11 +17,13 @@ $(document).ready(function(){
     });
 });
 
+var exeInterval;
+
 $(document).ready(function(){ //When document is ready.
 const GWB = $('#grandWrapperBlocker'); //Damage red screen.
 	$('#playButton').on('click', function(){ //When play button is clicked,
     	$('#playButton').hide(); //Hide play button.
-		const exeInterval = setInterval(function(){ //Repeat function per random time.
+		exeInterval = setInterval(function(){ //Repeat function per random time.
         	$(GWB).css({'display':'block'}); //Show damage red screen.
 			$(GWB).fadeOut(); //Hide damage red screen.
             const playerDMG = Math.floor(Math.random()*110); //Create random player damage.
@@ -45,6 +47,7 @@ const GWB = $('#grandWrapperBlocker'); //Damage red screen.
                 const endL = document.querySelector('#finishMsg');
                 endL.style.display = 'block';
                 endL.innerHTML = 'YOU <br> LOST <br>';
+                document.getElementById('playAgain').style.display = 'block';
 			}
     	}, 2000);
 	});
@@ -90,11 +93,13 @@ $(document).ready(function(){
            const endW = document.querySelector('#finishMsg');
            endW.style.display = 'block';
            endW.innerHTML = 'YOU <br> WON! <br>';
+           document.getElementById('playAgain').style.display = 'block';
+           clearInterval(exeInterval);
         }
     });
 });
 
-document.getElementById('finishMsg').addEventListener('click',() => {
+document.getElementById('playAgain').addEventListener('click',() => {
 	location.reload();
 });
 
@@ -119,11 +124,13 @@ $(document).ready(function(){
 document.getElementById('playButton').addEventListener('click', function(){
     document.getElementById('bgm').play();
     document.getElementById('bgm').volume = 0.5;
+    document.getElementById('bgm').style.display = 'block';
 });
 
 document.getElementById('howButton').addEventListener('click', function(){
     document.getElementById('bgm').play();
     document.getElementById('bgm').volume = 0.5;
+    document.getElementById('bgm').style.display = 'block';
 });
 
 document.getElementById('playButton').addEventListener('click', function(){
@@ -138,12 +145,35 @@ document.getElementById('howButton').addEventListener('click', function(){
 
 document.getElementById('skill1').addEventListener('click', function(){
     document.getElementById('skillSound').play();
+    document.getElementById('skillSound').volume = 0.5;
 });
 
 document.getElementById('skill2').addEventListener('click', function(){
     document.getElementById('skillSound1').play();
+    document.getElementById('skillSound1').volume = 0.5;
 });
 
 document.getElementById('skill3').addEventListener('click', function(){
     document.getElementById('skillSound2').play();
+    document.getElementById('skillSound2').volume = 0.5;
+});
+
+document.getElementById('monster').addEventListener('mousedown', function() {
+    document.getElementById('monster').style.borderColor = 'red';
+});
+
+document.getElementById('monster').addEventListener('click', function() {
+    document.getElementById('hitSound').load();
+    document.getElementById('hitSound').volume = 0.2;
+    document.getElementById('hitSound').play();
+});
+
+document.getElementById('monster').addEventListener('mouseup', function() {
+    document.getElementById('monster').style.borderColor = 'darkred';
+});
+
+document.getElementById('playAgain').addEventListener('mouseenter', function() {
+    document.getElementById('bubSound').load()
+    document.getElementById('bubSound').volume = 0.5;
+    document.getElementById('bubSound').play();
 });

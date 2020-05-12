@@ -65,6 +65,7 @@ body {
     font-family: MontSerrat,Tahoma,Arial,sans-serif;
     color: white;
     z-index: 1;
+    color: #e1a87a;
 }
 
 #intro {
@@ -74,6 +75,13 @@ body {
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 50px;
+    position: relative;
+    z-index: 5;
+    font-size: 20px;
+}
+
+#citizen {
+    color: white;
 }
 
 #wingsImg {
@@ -88,7 +96,7 @@ body {
     position: relative;
     width: 100%;
     margin-top: 0px;
-    border: 2px darkred solid;
+    border: 3px black solid;
     margin-bottom: 5%;
     border-radius: 15px;
 }
@@ -317,6 +325,28 @@ body {
     border-color: white;
 }
 
+#gameLink a,
+#gameLink2 a {
+    font-size: 35px;
+    font-weight: bold;
+    animation-name: colorChange;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+#gameLink,
+#gameLink2 {
+    margin-bottom: 35px;
+}
+
+@keyframes colorChange {
+    0% {color:blue;}
+    25% {color: red;}
+    50% {color: yellow;}
+    75% {color: black;}
+    100% {color: blue;}
+}
+
 #dmgText {
     font-size: 100%;
     font-weight: bold;
@@ -383,4 +413,9 @@ body {
 .methods {
     color: grey;
     border: 1px grey dotted;
+}
+
+.final, 
+.final2 {
+    color: white;
 }

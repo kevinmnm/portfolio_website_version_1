@@ -9,6 +9,12 @@
 //     }
 // }
 
+$(document).ready(function(){
+    $('.topBannerDivs').eq(2).on('click', function(){
+        open('resume.pdf');
+    });
+});
+
 $(document).ready(function() {
     $('#shoutboxButtonShowHideB').click(function() {
         $('#shoutbox').slideToggle();
@@ -89,6 +95,10 @@ $(document).ready(function() {
     $('#effectButtonShowHide').click(function() {
         $('#coolEyeDiv').slideToggle();
         $('.coolEyeDiv').slideToggle();
+        $('.final').slideToggle();
+        $('#gameLink').slideToggle();
+        $('#gameLink2').slideToggle();
+        $('.final2').slideToggle();
     });
 });
 
@@ -137,6 +147,9 @@ $(document).ready(function(){
         $('#aboutMeImageDiv').slideToggle();        
         $('#shoutbox').slideToggle();
         $('.coolEyeDiv').slideToggle();
+        $('#gameLink').slideToggle();
+        $('.final, .final2').slideToggle();
+        $('#gameLink2').slideToggle();
     });
 });
 
@@ -191,4 +204,10 @@ $(document).ready(function (){
             document.getElementById('congratZ').style.display = 'block';
         }
     });
+});
+
+/*****Projects.html******/
+
+document.querySelector('#first').addEventListener('mouseenter', function() {
+    document.getElementsByClassName('detailOverlay')[0].style.display = 'block';
 });
