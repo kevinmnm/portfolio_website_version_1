@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Card Match Game</title>
+    <link href='cardMatch.css' rel='stylesheet' type='text/css'>
+</head>
+<body onload='storage()'>
+<div id='howTo'>
+    How to play
+    <div id='howToTxt'>
+        <ul>
+            <li>Choose your character.</li>
+            <li>Find matching card.</li>
+            <li>Beat opponent.</li>
+            <li>Your score will be saved.</li>
+        </ul>
+    </div>
+</div>
+<div id='uWrap'>
+    <div id='gameDivCover'>
+        <div id='c1' class='character'>
+            <img src='monsters/c1.png' alt='Character'/>
+        </div>
+        <div id='c2' class='character'>
+            <img src='monsters/c2.png' alt='Character'/>
+        </div>
+        <div id='c3' class='character'>
+            <img src='monsters/c3.png' alt='Character'/>
+        </div>
+        <div id='c4' class='character'>
+            <img src='monsters/c4.png' alt='Character'/>
+        </div>
+    </div>
+    <div id='gameDiv'>
+        <table>
+            <tr>
+                <td id='pos1' class='card'></td>
+                <td id='pos2' class='card'></td>
+                <td id='pos3' class='card'></td>
+                <td id='pos4' class='card'></td>
+                <td id='pos5' class='card'></td>
+            </tr>
+            <tr>
+                <td id='pos6' class='card'></td>
+                <td id='pos7' class='card'></td>
+                <td id='pos8' class='card'></td>
+                <td id='pos9' class='card'></td>
+                <td id='pos10' class='card'></td>
+            </tr>
+            <tr>
+                <td id='pos11' class='card'></td>
+                <td id='pos12' class='card'></td>
+                <td class='cardZ'></td>
+                <td id='pos13' class='card'></td>
+                <td id='pos14' class='card'></td>
+            </tr>
+            <tr>
+                <td id='pos15' class='card'></td>
+                <td id='pos16' class='card'></td>
+                <td id='pos17' class='card'></td>
+                <td id='pos18' class='card'></td>
+                <td id='pos19' class='card'></td>
+            </tr>
+            <tr>
+                <td id='pos20' class='card'></td>
+                <td id='pos21' class='card'></td>
+                <td id='pos22' class='card'></td>
+                <td id='pos23' class='card'></td>
+                <td id='pos24' class='card'></td>
+            </tr>
+        </table>
+    </div>
+    <div id='charDiv'>
+        <div id='endGame'>
+            <div id='WL'></div>
+            <div id='plus'></div>
+            <div id='re' onclick='location.reload()'>Play Again</div>
+        </div>
+        <div id='player'>
+            <div class='current'>
+                0
+            </div>
+            <div class='imgD'></div>
+            <div class='score'>
+                <div id='win'>W
+                    <div id='winV'></div>
+                </div>
+                <div id='loss'>L
+                    <div id='lossV'></div>
+                </div>
+                <div id='draw'>D
+                    <div id='drawV'></div>
+                </div>
+            </div>
+        </div>
+        <div id='etc'>
+            <div class='current'>
+                0
+            </div>
+            <div class='imgD'></div>
+            <div class='score'>
+                <div id='win2'>W
+                    <div id='winV2'>0</div>
+                </div>
+                <div id='loss2'>L
+                    <div id='lossV2'>0</div>
+                </div>
+                <div id='draw2'>D
+                    <div id='drawV2'>0</div>
+                </div>
+            </div>
+        </div>
+        <div id='chat'>
+            <div id='startCover'>
+                <h2 id='gTxt'></h2>
+                <div id='start'>START</div>
+            </div>
+            <div id='chatTitle'></div>
+            <div id='chatHistory'>
+                <div class='msg' style='text-align:left'><u>BOT:</u> Let's have a fun game!</div>
+            </div>
+            <div id='chatInputWrapper'>
+                <input id='chatType' type='text'></input>
+                <button id='enterB' style='display:none;'></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id='monsterCollection'>
+    <img id='m1' class='mon' src='monsters/1.png' alt='monster1'/>
+    <img id='m1' class='mon' src='monsters/1.png' alt='monster1'/>
+    <img id='m2' class='mon' src='monsters/2.png' alt='monster2'/>
+    <img id='m2' class='mon' src='monsters/2.png' alt='monster2'/>
+    <img id='m3' class='mon' src='monsters/3.png' alt='monster3'/>
+    <img id='m3' class='mon' src='monsters/3.png' alt='monster3'/>
+    <img id='m4' class='mon' src='monsters/4.png' alt='monster4'/>
+    <img id='m4' class='mon' src='monsters/4.png' alt='monster4'/>
+    <img id='m5' class='mon' src='monsters/5.png' alt='monster5'/>
+    <img id='m5' class='mon' src='monsters/5.png' alt='monster5'/>
+    <img id='m6' class='mon' src='monsters/6.png' alt='monster6'/>
+    <img id='m6' class='mon' src='monsters/6.png' alt='monster6'/>
+    <img id='m7' class='mon' src='monsters/7.png' alt='monster7'/>
+    <img id='m7' class='mon' src='monsters/7.png' alt='monster7'/>
+    <img id='m8' class='mon' src='monsters/8.png' alt='monster8'/>
+    <img id='m8' class='mon' src='monsters/8.png' alt='monster8'/>
+    <img id='m9' class='mon' src='monsters/9.png' alt='monster9'/>
+    <img id='m9' class='mon' src='monsters/9.png' alt='monster9'/>
+    <img id='m10' class='mon' src='monsters/10.png' alt='monster10'/>
+    <img id='m10' class='mon' src='monsters/10.png' alt='monster10'/>
+    <img id='m11' class='mon' src='monsters/11.png' alt='monster11'/>
+    <img id='m11' class='mon' src='monsters/11.png' alt='monster11'/>
+    <img id='m12' class='mon' src='monsters/12.png' alt='monster12'/>
+    <img id='m12' class='mon' src='monsters/12.png' alt='monster12'/>
+</div>
+
+<audio id='orbis' controls preload='auto' loop>
+    <source src='orbis.mp3' type='audio/mpeg'>
+</audio>
+<audio id='quickWind'> 
+    <source src='quickWind.ogg' type='audio/ogg'>
+</audio>
+<audio id='win'>
+    <source src='win.mp3' type='audio/ogg'>
+</audio>
+<audio id='buffUp'>
+    <source src='buffUp.ogg' type='audio/ogg'>
+</audio>
+<audio id='cardFlip'>
+    <source src='cardFlip.ogg' type='audio/ogg'>
+</audio>
+
+
+<script src='Tlqkf.js'></script>    
+</body>
+</html>

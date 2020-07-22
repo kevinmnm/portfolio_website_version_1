@@ -1,0 +1,209 @@
+body {
+	position: absolute;
+    background-color: skyBlue;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border: 1px black solid;
+    margin: 0px;
+}
+
+#startScreen {
+	position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: skyblue;
+}
+
+#endScreen {
+	position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: gold;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 40px;
+    display: none;
+}
+
+#playAgain {
+	position: relative;
+    width: 20%;
+    height: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    background-color: dodgerblue;
+    box-shadow: 0 0 10px black;
+    border-radius: 15px;
+    margin-top: 10%;
+    font-size: 20px;
+    line-height: 2;
+}
+
+#playAgain:active {
+	box-shadow: 0 0 10px black inset;
+}
+
+#startGame {
+	position: relative;
+    width: 20%;
+    height: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    background-color: dodgerblue;
+    box-shadow: 0 0 10px black;
+    border-radius: 15px;
+    margin-top: 10%;
+    font-size: large;
+}
+
+#startGame:active {
+	box-shadow: 0 0 10px black inset;
+}
+
+#instruction {
+	position: relative;
+    margin-top: 15%;
+    width: 15%;
+    height: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    background-color: dodgerblue;
+    box-shadow: 0 0 10px black;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#instruction:active {
+	box-shadow: 0 0 10px black inset;
+    border-radius: 15px;
+}
+
+#instructionText {
+	position: relative;
+    margin-top: 2%;
+    width: 60%;
+    height: 40%;
+    font-size: 20px;
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: gold;
+    border-radius: 15px;
+    padding: 1%;
+}
+
+#score {
+	margin-top: 5%;
+    font-size: 40px;
+    user-select: none;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: purple;
+}
+
+#money {
+	user-select: none;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: saddleBrown;
+}
+
+#upgrade {
+    background-color: lightGreen;
+    width: 15%;
+    height: 10%;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 75%;
+    margin-top: 1%;
+    cursor: pointer;
+    box-shadow: 0 0 5px black;
+    user-select: none;
+}
+
+#degrade {
+    background-color: grey;
+    width: 15%;
+    height: 10%;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 75%;
+    margin-top: 1%;
+	color: lightGrey;
+    user-select: none;
+}
+
+#upgrade:active {
+	box-shadow: 0 0 5px black inset;
+}
+
+#upgrade:diabled {
+	background-color: grey;
+    color: lightGrey;
+}
+
+#foodText {
+	position: absolute;
+    left: 10%;
+    top: 26%;
+    font-size: 2.8vh;
+    user-select: none;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.food {
+	position: absolute;
+    width: 25px;
+    height: 15px;
+    border: 1px black solid;
+    border-radius: 15px;
+    background-color: brown;
+    left: 10%;
+    top: 30%;
+    cursor: pointer;
+}
+
+#fishBowl {
+	display: block;
+	position: absolute;
+   	width: 80%;
+    height: 50%;
+    border: 5px darkBlue solid;
+    border-top: none;
+    bottom: 10%;
+    left: 10%;
+}
+
+#water {
+	position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 75%;
+    background-color: blue;
+}
+
+#fish {
+	position: absolute;
+    height: 15%;
+    width: 20%;
+    background-color: orange;
+    border-radius: 40%;
+    top: 30%;
+    left: 10%;
+    text-align: center;
+    font-size: 3vh;
+    user-select: none;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    margin-right: 35px;
+}
+
+#fishBGM {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 12%;
+    height: 5%;
+    display: none;
+}

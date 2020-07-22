@@ -1,0 +1,63 @@
+#chooseVersionText {
+    color: yellowgreen;
+}
+
+#customedCard {
+    position: relative;
+    color: white;
+    width: 500px;
+    height: 450px;
+    border: 2px white solid;
+    margin-bottom: 10px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px black;
+}
+
+#name {
+    position: relative;
+    border-bottom: 2px white solid;
+    height: 100px;
+    width: 496px;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#nameIntro {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-bottom: 3px;
+}
+
+#cop {
+    float: right;
+    border: 1px blue solid;
+    background-color: dodgerBlue;
+    display: none;
+}
+
+#email {
+    font-size: 20px;
+    width: 50%;
+}
+
+#phone {
+    font-size: 20px;
+    width: 30%;
+}
+
+#address {
+    font-size: 20px;
+    width: 40%;
+}
+
+#hrhr {
+    margin: 5px;
+    padding: 0px;
+    border: 1px white solid;
+}

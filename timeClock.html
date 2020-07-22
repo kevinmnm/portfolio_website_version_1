@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible'>
+    <title>Stop Watch</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<style>
+body {
+	background-color: black;
+}
+
+hr {
+    border-color: white;
+}
+
+#stopWatch {
+	position: relative;
+    width: 650px;
+	height: 650;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+    background-color: gold;
+    padding: 30px;
+    color: white;
+   	border-radius: 25px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+#main {
+	grid-column: 1 / 4;
+    background-color: rgb(40,44,52);
+    height: 400px;
+    border-radius: 25px;
+    font-size: 200px;
+	line-height: 1.8;
+	user-select: none;
+    box-shadow: 0px 0px 5px black;
+}
+
+.all {
+	position: relative;
+	background-color: rgb(40,44,52);
+    height: 150px;
+    width: 100%;
+    border-radius: 25px;
+    user-select: none;
+    cursor: pointer;
+    font-size: 90px;
+    line-height: 1.6;
+    color: darkGrey;
+    box-shadow: 0px 0px 10px black;
+}
+
+.square {
+	position: relative;
+    background-color: darkRed;
+    height: 15px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.triangle-down {
+	position: relative;
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 10px solid darkGrey;
+}
+
+#sheet {
+	position: relative;
+    width: 650px;
+    color: white;
+   	border-radius: 25px;
+    box-sizing: border-box;
+    background-color: rgb(40,44,52);
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 10px black;
+}
+
+.fa-eject {
+	transform: rotate(180deg);
+}
+
+#pp2 {
+	display: none;
+    font-size: 83px;
+    line-height: 1.7;
+}
+
+#sep {
+	display: inline-block;
+	background-color: rgb(104, 180, 255);
+	padding: 8px;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+    color: black;
+    cursor: pointer;
+    color: black;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0px 0px 2px black;
+}
+
+#sep:active {
+	box-shadow: 0px 0px 2px black inset;
+    background-color: royalBlue;
+}
+
+#clearOut {
+    display: inline-block;
+    background-color: rgb(104, 180, 255);
+	padding: 8px;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+    color: black;
+    cursor: pointer;
+    color: black;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0px 0px 2px black;
+    margin-top: 20px;
+}
+
+#clearOut:active {
+    box-shadow: 0px 0px 2px black inset;
+    background-color: royalBlue;
+}
+
+#credit {
+    color: white;
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    font-size: 18px;
+}
+
+</style>
+</head>
+<body>
+<code id='credit'>Made by: Kevin Song</code>
+<center>
+    <div id='stopWatch'>
+        <div id='main'>0.00</div>
+        <div id='pp' class='all' title='Start timer'>
+            <i class="fa fa-play"></i>
+        </div>
+        <div id='pp2' class='all' title='Pause timer'>
+            <i class="fa fa-pause"></i>
+        </div>
+        <div id='record' class='all' title='Record time and reset timer'>
+            <i class="fa fa-stop"></i>
+        </div>
+        <div id='reset' class='all' title='Record time'>
+            <i class="fa fa-eject"></i>
+        </div>
+    </div>
+    
+    <div class='square' title='Fold/unfold record'>
+        <div class="triangle-down"></div>
+    </div>
+    
+    <div id='sheet'>
+        <div id='sep' onclick='sep()' title='Draw line in record'>Draw Separation</div>
+    </div>
+    <div id='clearOut' onclick='location.reload()' title='Reload page'>Reset All</div>
+</center>
+
+<script>
+    //Click style customization
+    $(document).ready(function(){
+        $('#pp').on('mousedown', function(){
+            $('#pp').css({
+                "box-shadow":"0px 0px 10px black inset"
+            });
+        });
+        $('#pp').on('mouseup', function(){
+            $('#pp').css({
+                "box-shadow":"0px 0px 10px black"
+            });
+        });
+        $('#record').on('mousedown', function(){
+            $('#record').css({
+                "box-shadow":"0px 0px 10px black inset"
+            });
+        });
+        $('#record').on('mouseup', function(){
+            $('#record').css({
+                "box-shadow":"0px 0px 10px black"
+            });
+        });
+        $('#reset').on('mousedown', function(){
+            $('#reset').css({
+                "box-shadow":"0px 0px 10px black inset"
+            });
+        });
+        $('#reset').on('mouseup', function(){
+            $('#reset').css({
+                "box-shadow":"0px 0px 10px black"
+            });
+        });
+    });
+    
+    //Global var
+    var timer;
+    var ttt = 0.00;
+    var nn = 0;
+    var pp = document.getElementById('pp');
+    var pp2 = document.getElementById('pp2');
+    var sheet = document.getElementById('sheet');
+    
+    //Click event function
+    $(document).ready(function(){
+    
+        $('#pp').on('click', function(){
+            timer = setInterval(function(){
+                ttt = ttt + 0.01;
+                $('#main').html(ttt.toFixed(2));
+            }, 10);
+            $('#pp').hide();
+            $('#pp2').show();
+        });
+        
+        $('#pp2').on('click', function(){
+            clearInterval(timer);
+            $('#pp2').hide();
+            $('#pp').show();
+        });
+        
+        $('#record').on('click', function(){
+            clearInterval(timer);
+            $('#pp2').hide();
+            $('#pp').show();
+            nn = nn + 1;
+            sheet.innerHTML = sheet.innerHTML + '<br>' + 'Record#' + nn + ': ' + ttt.toFixed(2) + ' s';
+            $('#main').html('0.00');
+        });
+    
+        $('#reset').on('click', function(){
+            nn = nn + 1;
+            sheet.innerHTML = sheet.innerHTML + '<br>' + 'Record#' + nn + ': ' + ttt.toFixed(2) + ' s';
+        });
+        
+        $('.square').eq(0).on('click', function(){
+            $('#sheet').slideToggle();
+        });
+    });
+     
+    function sep(){
+        document.getElementById('sheet').innerHTML = document.getElementById('sheet').innerHTML + '<hr>';
+    }
+
+</script>
+</body>
+</html>

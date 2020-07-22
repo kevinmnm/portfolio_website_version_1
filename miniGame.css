@@ -2,6 +2,12 @@ body {
     background-color: black;
 }
 
+#credit {
+    float: right;
+    color: white;
+    font-size: 16px;
+}
+
 #bgm {
     position: absolute;
     left: 630px;

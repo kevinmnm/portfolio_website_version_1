@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor Game</title>
+    <link rel='stylesheet' href='miniGame2.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<div id='rpsGrandWrapper'>
+    <div id='victory'>
+        <p>YOU WON!</p>
+        <br><br>
+        <button id='reload' onclick='location.reload()'>Play Again!</button>
+    </div>
+    <div id='defeat'>
+        <p>YOU LOST</p>
+        <br></br>
+        <button id='reload' onclick='location.reload()'>Play Again!</button>
+    </div>
+
+    <div id='playOverlay'>
+        <div id='credit'><code>Made By: Kevin Song</code></div>
+        <button id='playButton'>Play</button>
+        <button id='instruction'>Instruction</button>
+        <div id='instructionTxt'>
+            <p>Rock Paper Scissors Game!</p>
+            <p>Whoever gets 3 score points first will win!</p>
+        </div>
+    </div>
+    <div id='continue'>Continue</div>
+    
+<center>
+<!-------Table 1----------->
+    <table id='rpsTable1'>
+        <tr>
+            <th class='ysys'>Your Score</th>
+            <th class='tltl'>Time Left</th>
+            <th class='ysys'>Opponent Score</th>
+        </tr>
+        <tr>
+            <td id='yourScore'></td>
+            <td id='timeLeft'></td>
+            <td id='opponentScore'></td>
+        </tr>
+    </table>
+<!-------Table 2------------>    
+    <table id='rpsTable2'>
+        <tr>
+            <th id='playerScreen'></th>
+            <th id='computerScreen'></th>
+        </tr>
+    </table>
+<!-------Table 3----------->
+    <table id='rpsTable3'>
+        <th class='rock'>
+            <img src='https://www.rock-paper-scissors-game.com/i/rock.png' width='100px' alt='rock'/>
+        </th>
+        <th class='paper'>
+            <img src='https://www.rock-paper-scissors-game.com/i/paper.png' width='100px' alt='paper'/>
+        </th>
+        <th class='scissor'>
+            <img src='https://www.rock-paper-scissors-game.com/i/scissors.png' width='100px' alt='scissor'/>
+        </th>
+    </table>
+</div>
+</center>    
+
+<audio id='rpsThemeSound' controls loop preload='auto'>
+    <source src='rpsThemeSound.mp3'/>
+</audio>
+
+<audio id='getStar' preload='auto'>
+    <source src='getStar.ogg'/>
+</audio>
+
+<audio id='hoverSound' preload='auto'>
+    <source src='hoverSound.ogg'/>
+</audio>
+
+<audio id='oppStar' preload='auto'>
+    <source src='oppStar.ogg'/>
+</audio>
+
+<script src='miniGame2.js'></script>
+</body>
+</html>

@@ -4,11 +4,34 @@
     <meta charset='utf-8'>
     <title>My Portfolio Website</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='description' content='Kevin Jooyeoung Song Portfolio Website'>
+    <meta name='author' content='Kevin Jooyeoung Song'>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148978337-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-148978337-2');
+    </script>
+
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel='stylesheet' href='css1.css'>
     <link rel='stylesheet' href='External.css'>
     <link rel='stylesheet' href='scss1.scss'>
@@ -17,11 +40,11 @@
 <body draggable='false'>
 
 <div class='topBanner'>
-    <div class='topBannerDivs'><img id='homeImage' src='Home Image.png' onclick="location.href='index.html'"></img></div>
+    <div class='topBannerDivs'><img id='homeImage' src='Home Image.png' onclick="location.href='index.html'" alt='Home'></img></div>
     <div class='topBannerDivs' onclick="location.href='Portfolio.html'">Story</div>
     <div class='topBannerDivs'>Resume</div>
     <div class='topBannerDivs' onclick="location.href='Projects.html'">Projects</div>
-    <div class='topBannerDivs' onclick="location.href='ContactInfo.html'">Contact Info</div>
+    <div class='topBannerDivs' onclick="location.href='ContactInfo.html'">Contact</div>
 </div>
 
 <center>
@@ -34,7 +57,7 @@
 
 <h2 id='welcome2'>I'm looking for my first job as a Junior Front-End Web Developer.</h2>
 </div>
-<button id='allButtonShowHide'>Show/Hide All</div>
+<button id='allButtonShowHide'>Show/Hide All</button>
 <button id='shoutboxButtonShowHideB'>Show/Hide Shoutbox</button>
 <div id='shoutbox'>
     <script src="https://www.shoutbox.com/chat/chat.js.php"></script>
@@ -44,21 +67,49 @@
 
 <button id='aboutMeButtonShowHide'>Show/Hide About Me</button>
 <div id='aboutMeImageDiv' draggable='false'>
-    <img id='aboutMeImage' src='aboutme.png' draggable='false'></img>
+    <img id='aboutMeImage' src='aboutme.png' draggable='false' alt='About me'></img>
 </div>
-
-<audio id='myMusic'>
-    <source src='music.mp3' type='audio/mp3'>
-</audio>
 </center>
 
-<div id='playWrapper'>
-    <div id='playButton' onclick='playMusic()'>
-        <p>&#9654;</p>
-    </div>
-    <div id='pauseButton' onclick='pauseMusic()'>
-        <p>&#8214;</p> 
-    </div>
+<div id='musicMsg'>
+    Check out some of my favorite K-HipHop musics while you browse around!
+</div>
+
+<div id='musicWrapperIt'>&#9835;</div>
+<div id='musicWrapperI'>&#9835;</div>
+<div id='musicWrapper'>
+    I'm Hooked - Way Ched
+    <audio id='imHooked' class='mus' controls>
+        <source src='imHooked.mp3' type='audio/mp3'>
+    </audio>
+    All the way up - Jay Park
+    <audio id='allTheWayUp' class='mus' controls>
+        <source src='allTheWayUp.mp3' type='audio/mp3'>
+    </audio>
+    Balance - Way Ched
+    <audio id='balance' class='mus' controls>
+        <source src='balance.mp3' type='audio/mp3'>
+    </audio>
+    Make U Dance - Uneducated Kid
+    <audio id='makeUdance' class='mus' controls>
+        <source src='makeUdance.mp3' type='audio/mp3'>
+    </audio>
+    REC - Way Ched
+    <audio id='REC' class='mus' controls>
+        <source src='REC.mp3' type='audio/mp3'>
+    </audio>
+    Super Saiyan - Han Yo Han
+    <audio id='superSaiyan' class='mus' controls>
+        <source src='superSaiyan.mp3' type='audio/mp3'>
+    </audio>
+    The Truth Is - Jay Park
+    <audio id='theTruthIs' class='mus' controls>
+        <source src='theTruthIs.mp3' type='audio/mp3'>
+    </audio>
+    Why You? - Sik-K
+    <audio id='whyYou' class='mus' controls>
+        <source src='whyYou.mp3' type='audio/mp3'>
+    </audio>
 </div>
 
 <center>
@@ -103,11 +154,11 @@
 <div id='effectButtonShowHide'>Show/Hide Games</div>
 <div class='methods final'>Game 1 - Finished - <b>CLICKER GAME</b></div>
 <div id='gameLink'>
-    <a href='miniGame.html' target='_blank'>-> Click here to see the final product! <-</a>
+    <a href='miniGame.html' target='_blank'>-Click here to see the final product!-</a>
 </div>
 <div id='coolEyeDiv' draggable='false'>
     <div class='methods method1'>Game 1 - Method 1 : Click here to see detail</div>
-    <img id='coolEyeId' src='coolEye.gif' alt='Just a cool gif' draggable='false'>
+    <img id='coolEyeId' src='coolEye.gif' alt='Just a cool gif' draggable='false' alt='Monster gif'>
         <div id='dmgText'>Click to kill!</div>
     </img>
     <div class='coolEyeId2'>CONGRATULATION!<br>YOU WON!</div>
@@ -115,18 +166,34 @@
 
 <div class='coolEyeDiv'>
     <div class='methods method2'>Game 1 - Method 2 : Click here to see detail</div>
-    <img class='coolEyeClass' src='coolEye.gif' alt='Just a cool gif' draggable='false'></img>
+    <img class='coolEyeClass' src='coolEye.gif' alt='Just a cool gif' draggable='false' alt='Monster gif'></img>
     <div id='dmgText2'>Click to kill!</div>
     <div id='redBossText'></div>
     <div id='congratZ'>CONGRATULATION!<br>YOU WON!</div>
 </div>
+
 <div class='methods final2'>Game 2 - Finished - <b>ROCK PAPER SICSSORS</b></div>
 <div id='gameLink2'>
-    <a href='miniGame2.html' target='_blank'>-> Click here to see the final product! <-</a>
+    <a href='miniGame2.html' target='_blank'>Click here to see the final product!-</a>
+</div>
+
+<div class='methods final3'>Game 3 - Finished - <b>FISH FARM</b></div>
+<div id='gameLink3'>
+    <a href='miniGame3.html' target='_blank'>-Click here to see the final product!-</a>
+</div>
+<div class='methods method3' style='width:60%;'>Game 3 - Method 1 : Click here to see detail</div>
+<div id ='game3method1'>
+    <div class='food'></div>
+    <div id='fishBowl'>
+        <div id='water'>
+            <div id='fish'>fish</div>
+        </div>
+    </div>
 </div>
 <br><br>
 </center>
 
 <script src='js1.js'></script>
+<script src='miniGame3.js'></script>
 </body>
 </html>

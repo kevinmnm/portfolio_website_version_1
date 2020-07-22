@@ -1,13 +1,7 @@
 
-// function showHideButton() {
-//     var shoutB = document.getElementById('shoutbox');
-
-//     if (shoutB.style.display !== 'none') {
-//         shoutB.style.display = 'none';
-//     } else {
-//         shoutB.style.display = 'block';
-//     }
-// }
+$(document).ready(function(){
+    $('.shoutboxAvatar').attr("alt","img");
+});
 
 $(document).ready(function(){
     $('.topBannerDivs').eq(2).on('click', function(){
@@ -27,26 +21,30 @@ $(document).ready(function() {
     });
 });
 
-function playMusic() {
-    var mus = document.getElementById('myMusic');
-    var playIcon = document.getElementById('playButton');
-    var pauseIcon = document.getElementById('pauseButton');
+//Audio message onload
 
-    mus.play();
-    mus.volume = 0.5;
-    playIcon.style.display = 'none';
-    pauseIcon.style.display = 'block';
-}
+$(document).ready(function(){
+    $('#musicMsg').delay(2000).show(1000).delay(4500).hide(1000);
+});
 
-function pauseMusic() {
-    var mus = document.getElementById('myMusic');
-    var playIcon = document.getElementById('playButton');
-    var pauseIcon = document.getElementById('pauseButton');
+//Audio play
+$(document).ready(function() {
+    $('#musicWrapperIt').on('click', function() {
+        $('#musicWrapperIt').hide();
+        document.querySelector('#imHooked').play();
+        $('#musicWrapper').slideToggle();
+    });
 
-    mus.pause();
-    playIcon.style.display = 'block';
-    pauseIcon.style.display = 'none';
-}
+    $('#musicWrapperI').on('click', function() {
+        $('#musicWrapper').slideToggle();
+    });
+
+    var songList = document.getElementsByClassName('mus');
+
+    for ( var i = 0; i < songList.length; i++) {
+        songList[i].volume = 0.4;
+    }
+});
 
 /*shooting star*/
 
@@ -99,6 +97,10 @@ $(document).ready(function() {
         $('#gameLink').slideToggle();
         $('#gameLink2').slideToggle();
         $('.final2').slideToggle();
+        $('.final3').slideToggle();
+        $('#gameLink3').slideToggle();
+        $('.method3').slideToggle();
+        $('#game3method1').slideToggle();
     });
 });
 
@@ -150,6 +152,10 @@ $(document).ready(function(){
         $('#gameLink').slideToggle();
         $('.final, .final2').slideToggle();
         $('#gameLink2').slideToggle();
+        $('.final3').slideToggle();
+        $('#gameLink3').slideToggle();
+        $('.method3').slideToggle();
+        $('#game3method1').slideToggle();
     });
 });
 
@@ -206,8 +212,40 @@ $(document).ready(function (){
     });
 });
 
-/*****Projects.html******/
+/********Game 3 methods******/
+//Global var
+var cloneF;
+var $fishBowl = $('#fishBowl');
 
-document.querySelector('#first').addEventListener('mouseenter', function() {
-    document.getElementsByClassName('detailOverlay')[0].style.display = 'block';
+
+$(document).ready(function(){
+
+    $('#fishBowl').on('click', function(event) {
+    	if (event.target !== document.querySelector('#fish')) {
+            var ranN = Math.floor(Math.random() * 1100000000);
+            cloneF = $('.food').eq(0).clone();
+            cloneF.id = 'clid' + ranN;
+            cloneF.css({
+                "position":"absolute",
+                "left":event.offsetX + "px",
+                "top":event.offsetY + "px",
+                "border":"1px solid black",
+                "display":"block",
+                "margin":"0"
+            });
+            cloneF.appendTo(event.target);
+            cloneF.animate({
+                "top":"100%"
+            }, 5000);
+            
+            var cPos = cloneF.position();
+            $('#fish').animate({
+            	"top":cPos.top - (($('#fish').height() / 2) - 8) + 'px',
+                "left":cPos.left - (($('#fish').width() / 2) - 12) + 'px'
+            }, 1000);
+            var fish = document.querySelector('#fish');
+            
+        }
+      });
+    
 });

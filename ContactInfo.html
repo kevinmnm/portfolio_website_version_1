@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel='stylesheet' href='css1.css'>
     <link rel='stylesheet' href='External.css'>
-    <link rel='stylesheet' href='scss1.scss'>
+    <link rel='stylesheet' href='ContactInfo.css'>
 </head>
 <body id='contactInfoBackground'>
 
@@ -20,7 +20,7 @@
     <div class='topBannerDivs' onclick="location.href='Portfolio.html'">Story</div>
     <div class='topBannerDivs'>Resume</div>
     <div class='topBannerDivs' onclick="location.href='Projects.html'">Projects</div>
-    <div class='topBannerDivs' onclick="location.href='ContactInfo.html'">Contact Info</div>
+    <div class='topBannerDivs' onclick="location.href='ContactInfo.html'">Contact</div>
 </div>
 
 <center>
@@ -36,7 +36,7 @@
         Silver
         
         <div class="card card--white card--sm">
-          <div class="card__chip"></div>
+          <!-- <div class="card__chip"></div> -->
           <div class="card__content">
             <div class="card__text">
               <div class="text__row">
@@ -49,8 +49,8 @@
               </div>
             </div>
             <div class="card__symbol">
-              <span></span>
-              <span></span>
+              <!-- <span></span>
+              <span></span> -->
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@
         Royal blue
         
         <div class="card card--blue card--sm">
-          <div class="card__chip"></div>
+          <!-- <div class="card__chip"></div> -->
           <div class="card__content">
             <div class="card__text">
               <div class="text__row">
@@ -78,8 +78,8 @@
               </div>
             </div>
             <div class="card__symbol">
-              <span></span>
-              <span></span>
+              <!-- <span></span>
+              <span></span> -->
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@
         Dark grey
         
         <div class="card card--dark card--sm">
-          <div class="card__chip"></div>
+          <!-- <div class="card__chip"></div> -->
           <div class="card__content">
             <div class="card__text">
               <div class="text__row">
@@ -107,25 +107,44 @@
               </div>
             </div>
             <div class="card__symbol">
-              <span></span>
-              <span></span>
+              <!-- <span></span>
+              <span></span> -->
             </div>
           </div>
         </div>
       </label>
     </div>
   </div>
-
-  <div id='silverContact' class='contactCards'>
-  </div>
-
-  <div id='blueContact' class='contactCards'>
-  </div>
-
-  <div id='greyContact' class='contactCards'>
-  </div>
-
 </center>
+ <br><br> 
 
+<div id='customedCard'>
+    <div id='name'>Kevin J. Song</div>
+    <p id='nameIntro'>
+        *US Citizen*<br>
+        *Seeking Full-Time Position*<br>
+        *Open For Relocation / Remote Work*
+    </p>
+    <hr id='hrhr'>
+<center>
+    <div id='email'>
+        <b><u>Email</u></b>
+        <p>Kevinmnm2010@gmail.com</p>
+        <div id='cop'>Copy</div>
+    </div>
+    <div id='phone'>
+        <b><u>Phone</u></b>
+        <p>301-802-8670</p>
+    </div>
+    <div id='address'>
+        <b><u>Address</u></b> <br>
+        230 Welsh Hill Rd. <br>
+        Frostburg, MD 21532
+    </div>
+</center>
+</div>
+
+<script src='ContactInfo.js'></script>
+<script src='js1.js'></script>
 </body>
 </html>

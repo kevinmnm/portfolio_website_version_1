@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>E-Commerce Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="slick.css"/>
+
+  
+  <link rel='stylesheet' href='eCommerce.css'>
+  <link rel='stylesheet' href='eCommerceEx.css'>
+</head>
+<body onload='localS()'>
+
+<div id='addedMsg'>Item Added!</div>
+<div class='preview'></div>
+<div id='cartPage'>
+    <p>Cart</p>
+    <div id='itemCount'>
+        <p><u>Added Items Count</u></p>
+        <p id='addedN'></p>
+        <button id='subtract' onclick='subtract()'>-</button>
+        <button id='reset' onclick='reset()'>Reset</button>
+        <button id='add' onclick='add()'>+</button>
+        <br><br>
+        <p><u>Total Cost</u></p>
+        <p id='totalC'></p><br>
+        <div id='cont' onclick='back()'>Back</div><br>
+        <div id='check' onclick='check()'>Checkout</div>
+    </div>
+</div>
+
+<nav>
+	<p id='navP'>PURCHASE WITHIN 24 HOURS AND GET <u id='theU'>10% OFF</u> ON ANY PRODUCT!</p>
+    <div id='cclose'>
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+    </div>
+</nav>
+<header>
+	<div id='flexBox'>
+    	<div class='flexItem'>
+            <div id='hamIcon' class='glyphicon glyphicon-menu-hamburger'></div>
+            <div class='burgerList'>
+                <p id='logg'>LOG IN</p>
+                <p id='m1'>ALL PRODUCTS</p>
+                <p id='m2'>BEST SELLERS</p>
+                <p id='about2'>ABOUT</p>
+            </div>
+        	<div id='shop'>
+                SHOP &#9662;
+                <div id='shopM'>
+                    <p id='m11'>ALL PRODUCTS</p>
+                    <p id='m22'>BEST SELLERS</p>
+                </div>
+            </div>
+            <div id='about'>
+                ABOUT &#9662;
+                <div id='aboutM'>
+                    This is not a legitimate store.<br> 
+                    *Adjust browser size to see responsive design*
+                </div>
+            </div>
+        </div>
+        <div id='logo' class='flexItem' onclick='location.reload()'>
+            <img id='logoImg' src='logo.png'/>
+        </div>
+        <div class='flexItem'>
+        	<div id='profile'>
+                <span class="glyphicon glyphicon-user">
+                </span>
+                <div id='logIn'>
+                    <input type='text' placeholder='Username'></input><br>
+                    <input type='text' placeholder='Password'></input><br>
+                    <center><button>Login</button></center>
+                </div>
+            </div>
+            <div id='cart'>
+                <span class="glyphicon glyphicon-shopping-cart" onclick='cartPage()'></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id='section1'>
+    <img id='img1' src='myStoreImg.png'/>
+    <img id='img2' src='myStoreImg2.png'/>
+</section>
+
+<section id='section2'>
+	<div id='bText'>&#9733;BEST SELLERS OF THE MONTH&#9733;</div>
+	<div id='bestSellers'>
+        <div class='scroller1'></div>
+        <div id='bWrapper'>
+        	<div class='bItems'><img src='books/b1.jpg'/></div>
+            <div class='bItems'><img src='books/b2.jpg'/></div>
+            <div class='bItems'><img src='books/b3.jpg'/></div>
+            <div class='bItems'><img src='books/b4.jpg'/></div>
+            <div class='bItems'><img src='books/b5.jpg'/></div>
+            <div class='bItems'><img src='books/b6.jpg'/></div>
+            <div class='bItems'><img src='books/b7.jpeg'/></div>
+        </div>
+        <div class='scroller2'></div>
+    </div>
+</section>
+
+<section id='section3'>
+	<div class='flexItems' id='signUp'>
+    	<p>Sign Up and Get<br>Discount Coupons Every Week!</p><br>
+        <label>FIRST NAME</label><br>
+        <input id='i1' type='text'></input><br>
+        <label>EMAIL</label><br>
+        <input id='i2'type='email'></input><br><br>
+        <button id='emailS'>SUBMIT</button><br>
+    </div>
+    <div class='flexItems' id='socialM'>
+    	<div>
+            Keep in touch with us!
+        </div>
+        <br>
+        <div>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-pinterest"></a>
+            <a href="#" class="fa fa-youtube"></a>
+        </div><br><br>
+        <div id='copyRight'>&#169;MYSTORE</div><br>
+        <div id='copyRight'>
+            WEBSITE MADE BY<br>
+            KEVIN SONG
+        </div>
+    </div>
+    <div class='flexItems' id='faq'>
+        <br>
+    	<p>FAQ</p><br>
+        <p>PRIVACY POLICY</p><br>
+        <p>TERM OF USE</p><br>
+        <p>CONTACT US</p>
+    </div>
+</section>
+
+<script src='eCommerce.js'></script>
+<script type="text/javascript" src="slick.js"></script>
+</body>
+</html>

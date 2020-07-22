@@ -1,0 +1,154 @@
+@media screen and (max-width: 500px) {
+    nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    margin-top: 0;
+}
+
+#navP {
+    display: relative;
+    font-size: 12px;
+    margin: 2px;
+}
+
+#cclose button {
+    transform: translateY(-20%);
+}
+
+#about, #shop {
+    display: none;
+}
+
+#profile {
+    display: none;
+    position: relative;
+    top: 2px;
+    right: 27px;
+    width: 45%;
+    height: auto;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#cart {
+    display: block;
+    position: relative;
+    top: 2px;
+    right: 15px;
+    width: 45%;
+    height: auto;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#logoImg {
+    width: 200px;
+    margin: auto;
+}
+
+#img1 {
+    display: none;
+}
+
+#img2 {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#hamIcon {
+    float: left;
+    position: relative;
+    width: 45%;
+    height: auto;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(43, 42, 42);
+    cursor: pointer;
+    margin: 0;
+    margin-top: 1%;
+    display: block;
+    border: none;
+    background: none;
+}
+
+#section3 {
+    flex-flow: column;
+    background: none;
+}
+
+.flexItem {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+#signUp {
+    text-align: auto;
+    width: 100%;
+    
+}
+
+#signUp p {
+    font-size: 20px;
+    width: 100%;
+}
+
+#signUp input {
+    width: 250px;
+    height: 35px;
+    font-size: 20px;
+    border: 1px solid rgb(138, 206, 36);
+    outline: none;
+    box-shadow: 0 0 5px grey;
+}
+
+#signUp button {
+    width: 250px;
+    height: 35px;
+    font-size: 20px;
+    background-color: rgb(138, 206, 36);
+    border: none;
+    box-shadow: 0 0 5px grey;
+    outline: none !important;
+}
+
+#signUp button:active {
+    outline: none;
+    box-shadow: 0 0 5px grey inset;
+}
+
+#socialM {
+    width: 100%;
+    background-image: url(world-background.png);
+}
+
+#copyRight {
+    font-size: 15px;
+}
+
+#faq {
+    width: 100%;
+    font-size: 15px;
+    background-color: #a2e486;
+    color: black;
+}
+
+}
+

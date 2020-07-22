@@ -1,0 +1,456 @@
+
+
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+html {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    top: 0;
+    left: 0;
+}
+
+body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    border: 1px solid white;
+    background-image: url('sky.png');
+}
+
+#howTo{
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+    width: 300px;
+    font-size: 18px;
+    border: 1px skyblue solid;
+    background-color: skyblue;
+    padding: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px black;
+    border-radius: 5px;
+}
+
+#howTo:active{
+    box-shadow: 0 0 10px black inset;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#howToTxt{
+    display: none;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#uWrap {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    box-shadow: 0 0 15px black, 0 0 15px black;
+    margin: auto;
+    width: 1200px;
+    margin-top: 50px;
+}
+
+#gameDiv {
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    height: 610px;
+    width: 600px;
+    margin-bottom: -5px;
+    background: rgb(217, 243, 253);
+}
+
+#gameDivCover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    height: 610px;
+    width: 600px;
+    margin-bottom: -5px;
+    z-index: 1;
+    background: rgb(217, 243, 253);
+}
+
+#gameDiv table {
+    position: relative;
+    margin: auto;
+    padding: 0;
+}
+
+tr {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+#charDiv {
+    display: block;
+    position: relative;
+    width: 50%;
+    height: 610px;
+    box-sizing: border-box;
+    border: black;
+    padding: 0;
+    font-size: 0;
+    background-color: rgb(208, 239, 252);
+    background-image: linear-gradient(rgb(208, 239, 252), rgb(244, 247, 119));
+}
+
+.character {
+    position: absolute;
+    width: 300px;
+    height: 305px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.character:hover,
+.charHov {
+    border: 1px solid royalBlue !important;
+    opacity: 1 !important;
+    background-color: royalBlue !important;
+}
+
+.character img {
+    position: relative;
+    width: 200px;
+    top: 50px;
+}
+
+#c2 {
+    left: 300px;
+}
+
+#c3 {
+    top: 305px;
+}
+
+#c4 {
+    top: 305px;
+    left: 300px;
+}
+
+.card {
+    position: relative;
+    width: 118px;
+    height: 120px;
+    background: url('cardCover.png');
+    background-size: 117px;
+    cursor: pointer;
+    margin: auto;
+    background-repeat: no-repeat;
+}
+
+.card:hover {
+    opacity: 0.5;
+}
+
+.cardZ {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    box-shadow: 0 0 10px black inset;
+    border-radius: 10px;
+    font-size: 90px;
+    font-weight: bold;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 51%, rgba(58,90,255,1) 100%);
+}
+
+#player {
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border: 1px black solid;
+}
+
+.imgD {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    transform: translateX(50%);
+    top: 20%;
+}
+
+.imDimg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#etc {
+    position: absolute;
+    display: block;
+    width: 50%;
+    border: 1px black solid;
+    height: 50%;
+    margin: 0;
+    right: 0;
+    padding: 0;
+    top: 0;
+    border-collapse: collapse;
+}
+
+#chat {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background-color: black;
+}
+
+#chatType {
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    left: 10%;
+    border: 2px solid black;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.msg {
+    position: relative;
+    display: block;
+    width: auto;
+    font-size: 18px;
+    color: white;
+    margin: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px;
+    word-wrap: break-word;
+}
+
+.msgScore {
+    position: relative;
+    display: block;
+    width: auto;
+    font-size: 18px;
+    color: white;
+    margin: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px;
+    word-wrap: break-word;
+    text-align: center;
+    background-color: brown;
+}
+
+.msgScore2 {
+    position: relative;
+    display: block;
+    width: auto;
+    font-size: 18px;
+    color: white;
+    margin: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px;
+    word-wrap: break-word;
+    text-align: center;
+    background-color: purple;
+}
+
+#chatTitle {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#chatHistory {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    height: 90.5%;
+    border: 1px solid orangered;
+    overflow-y: auto;
+}
+
+#startCover {
+    position: absolute;
+    z-index: 1;
+    background-color: skyBlue;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    box-shadow: 0 0 25px black inset;
+    background: rgb(159,250,255);
+    background: radial-gradient(circle, rgba(159,250,255,1) 0%, rgba(58,90,255,1) 100%);
+}
+
+#start {
+    position: relative;
+    width: 100px;
+    height: 70px;
+    background-color: dodgerBlue;
+    margin: auto;
+    margin-top: 100px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 10px darkBlue;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 2.5;
+    text-align: center;
+}
+
+#start:active {
+    box-shadow: 0 0 10px darkBlue inset;
+}
+
+.score {
+    position: relative;
+    width: 100%;
+    height: 25%;
+    top: 75%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.score div {
+    font-size: 30px;
+}
+
+.mon {
+    position: relative;
+    height: 115px;
+    width: 114px;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    display: none;
+    box-shadow: 0 0 5px black;
+}
+
+#monsterCollection {
+    font-size: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#player #win,
+#player #loss,
+#player #draw,
+#etc #win2,
+#etc #loss2,
+#etc #draw2 {
+    display: inline-block;
+    width: 32%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    font-size: 12px;
+    box-shadow: 0 0 5px black inset, 0 0 10px black inset;
+    border-radius: 5px;
+    padding-top: 2px;
+    background-color: rgb(238, 206, 117);
+    background-image: linear-gradient(rgb(238, 206, 117), rgb(218, 185, 97));
+
+}
+
+#winV,
+#lossV,
+#drawV,
+#winV2,
+#lossV2,
+#drawV2 {
+    display: block;
+}
+
+#gTxt {
+    font-size: 30px;
+}
+
+.current {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(207, 207, 11);
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 1;
+    color: black;
+    box-shadow: 0 0 5px black;
+}
+
+#orbis{
+    position: relative;
+    top: 100px;
+    display: none;
+    margin: auto;
+}
+
+#endGame{
+    position: absolute;
+    display: none;
+    z-index: 9;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background: radial-gradient(circle, rgba(175,210,255,1) 70%, rgba(161,65,201,1) 100%);
+}
+
+#plus{
+    position: relative;
+    font-size: 30px;
+    font-weight: normal;
+    top: 100px;
+    color: purple;
+}
+
+#WL{
+    position: relative;
+    font-size: 50px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#re{
+    position: relative;
+    font-size: 35px;
+    margin: auto;
+    top: 300px;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px black;
+    padding: 5px;
+    width: 250px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: dodgerBlue;
+}
+
+#re:active{
+    box-shadow: 0 0 15px black inset;
+    font-size: 33px;
+}
+
