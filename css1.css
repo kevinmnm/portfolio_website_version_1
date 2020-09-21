@@ -1,4 +1,30 @@
 
+.kevsong{
+   cursor: pointer;
+   text-underline-position: under;
+}
+
+.kevsong:hover{
+   color: greenYellow;
+}
+
+.outdated{
+   position: relative;
+   font-size: 25px;
+   color: red;
+   /* animation: outdate infinite 1s; */
+}
+
+/* @keyframes outdate{
+   from {
+      color: red;
+   }
+
+   to {
+      color: blue;
+   }
+} */
+
 .topBanner {
     position: fixed;
     top: 0;
